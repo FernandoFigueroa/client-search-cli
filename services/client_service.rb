@@ -10,11 +10,12 @@ class ClientService
   end
 
   def search(value:, attribute: 'full_name')
-    @clients.select { |client| client[attribute].downcase.strip.include?(value.downcase.strip) }
+    @clients.select { |client| client[attribute]&.downcase&.strip&.include?(value&.downcase&.strip) }
   end
 
   def duplicates_list(attribute: 'email')
-    @clients.group_by { |client| client[attribute] }.select { |_, matches| matches.size > 1 }.map(&:first)
+    @clients.group_by { |client| client[attribute]&.downcase&.strip }.select { |_, matches| matches.size > 1 }
+            .map(&:first)
   end
 
   private
