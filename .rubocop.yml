@@ -1,0 +1,7 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'data/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
