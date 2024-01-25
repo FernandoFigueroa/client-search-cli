@@ -25,6 +25,7 @@ Minimalist command line application built with ruby, using Thor for interface an
 - Add some schema validation for the json file, to ensure integrity for the dataset, using (https://github.com/voxpupuli/json-schema) for example
 - Accept the lookup file via options, to give more flexibility
 - Do more fun things, maybe load the .json to Elasticsearch and do some interesting queries
+- Definitely add some factory for the specs
 - Certainly, so much more that can be done xD!
 
 ## Final thoughts
