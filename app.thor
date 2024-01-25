@@ -11,7 +11,7 @@ class App < Thor
   desc 'search "John Doe" full_name', 'Searches a client by the specified field (full_name by default)'
   def search(value, attribute = 'full_name')
     if %w[email full_name id].include?(attribute)
-      results = ClientService.new.search(value:, attribute:).count
+      results = ClientService.new.search(value:, attribute:)
       puts SearchView.summary_output(results, attribute)
     else
       puts 'Invalid attribute'
