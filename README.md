@@ -21,6 +21,9 @@ Minimalist command line application built with ruby, using Thor for interface an
     - ```thor app:duplicated_items full_name``` returns the list of duplicated items by full name
     - If no duplicated items, you should see a message indicating that no duplicates were found
 
+## Run the tests
+Just type ```rspec``` to run all tests.
+
 ## TODO
 - Add some schema validation for the json file, to ensure integrity for the dataset, using (https://github.com/voxpupuli/json-schema) for example
 - Accept the lookup file via options, to give more flexibility
